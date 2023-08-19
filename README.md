@@ -11,6 +11,28 @@
 
 **Serde is a framework for *ser*ializing and *de*serializing Rust data structures efficiently and generically.**
 
+> [!IMPORTANT]
+> This is a fork of [serde-rs/serde](https://github.com/serde-rs/serde) which
+> addresses [serde#2538](https://github.com/serde-rs/serde/issues/2538) by
+> reverting the addition of the pre-compiled binary blob. It should function as
+> a drop-in replacement for serde / serde_derive `>= 1.0.172`.
+
+The changes are based on [two][patch0] [patches][patch1] that have been applied
+to the Fedora Linux packages for all versions of serde_derive `>= 1.0.172`.
+
+[patch0]: https://src.fedoraproject.org/rpms/rust-serde_derive/blob/rawhide/f/serde_derive-fix-metadata.diff
+[patch1]: https://src.fedoraproject.org/rpms/rust-serde_derive/blob/rawhide/f/0001-Drop-usage-of-precompiled-binary-that-s-not-usable-f.patch
+
+Note that some crates have already pinned serde / serde_derive to `<= 1.0.171`,
+in which case using this git repository as an [override] will not work (due to
+the higher version numbers).
+
+[override]: https://doc.rust-lang.org/cargo/reference/overriding-dependencies.html#the-patch-section
+
+I will attempt to merge new releases of serde / serde_derive here in a timely
+fashion. If there's enough interest in this fork, I will publish the deblobbed
+code on crates.io under a different name.
+
 ---
 
 You may be looking for:
