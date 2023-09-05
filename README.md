@@ -1,3 +1,11 @@
+> [!IMPORTANT]
+> Changes that are equivalent to the patch applied in this fork have been
+> accepted for serde, and have been released as serde / serde_derive v1.0.185.
+> Since this eliminates the need for a fork, this project will be archived and
+> will not receive any further changes.
+
+---
+
 # Serde &emsp; [![Build Status]][actions] [![Latest Version]][crates.io] [![serde: rustc 1.31+]][Rust 1.31] [![serde_derive: rustc 1.56+]][Rust 1.56]
 
 [Build Status]: https://img.shields.io/github/actions/workflow/status/serde-rs/serde/ci.yml?branch=master
